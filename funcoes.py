@@ -8,15 +8,7 @@ def rolar_dados(n):
 
 def guardar_dado(dados_rolados, dados_no_estoque, indice):
     dados_no_estoque.append(dados_rolados[indice])
-    dados_rolados2 = []
-    x = 0
-    for i in range(len(dados_rolados)):
-        if dados_rolados[i] == dados_rolados[indice]:
-            x+=1
-            if x > 0:
-                break
-        if dados_rolados[i]!= dados_rolados[indice]:
-            dados_rolados2.append(dados_rolados[i])
+    dados_rolados2 = dados_rolados.remove(dados_rolados[indice])
     lista= [dados_rolados2,dados_no_estoque]
     
     return lista 
