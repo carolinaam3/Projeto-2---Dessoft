@@ -6,5 +6,10 @@ def rolar_dados(n):
         lista.append(x)
     return lista
 
-def guardar_dado(lista, n):
-    fsghbjk
+def guardar_dado(dados_rolados, dados_no_estoque, indice):
+    dados_no_estoque.append(dados_rolados[indice])
+    dados_rolados2 = []
+    for i in range(len(dados_rolados)):
+        if dados_rolados[i]!= dados_rolados[indice]:
+            dados_rolados2.append(dados_rolados[i])
+    return dados_rolados2
