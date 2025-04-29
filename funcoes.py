@@ -12,4 +12,6 @@ def guardar_dado(dados_rolados, dados_no_estoque, indice):
     for i in range(len(dados_rolados)):
         if dados_rolados[i]!= dados_rolados[indice]:
             dados_rolados2.append(dados_rolados[i])
-    return dados_rolados2
+    lista= [dados_rolados2,dados_no_estoque]
+    
+    return lista 
