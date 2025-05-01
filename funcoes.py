@@ -26,8 +26,30 @@ def calcula_pontos_regra_simples(lista):
     for i in lista:
          dicionário[i] += i
     return dicionário  
+
 def calcula_pontos_soma (lista):
     soma = 0
     for i in lista:
         soma+=i
     return soma 
+
+def calcula_pontos_sequencia_baixa (lista):
+    menor = 100
+    crescente = []
+    for i in range(5):
+        for i in lista:
+            if i < menor:
+                menor = i
+        crescente.append(menor)
+        lista.remove(menor)
+        menor = 100
+    a = 0
+    for i in range(len(crescente)-1):
+        if crescente[i+1] > crescente[i]:
+            a +=1
+    if a == 4:
+        return 15
+    else:
+        return 0
+
+    
