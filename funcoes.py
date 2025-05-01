@@ -18,3 +18,11 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     dados_rolados.append(dados_no_estoque[dado_para_remover])
     del dados_no_estoque[dado_para_remover]
     return [dados_rolados,dados_no_estoque]
+
+def calcula_pontos_regra_simples(lista):
+    dicionário = {}
+    for i in range(6):
+        dicionário[i+1] = 0
+    for i in lista:
+         dicionário[i] += i
+    return dicionário  
