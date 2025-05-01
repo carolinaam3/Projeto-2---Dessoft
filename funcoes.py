@@ -36,7 +36,7 @@ def calcula_pontos_soma (lista):
 def calcula_pontos_sequencia_baixa (lista):
     menor = 100
     crescente = []
-    for i in range(5):
+    for i in range(len(lista)):
         for i in lista:
             if i < menor:
                 menor = i
