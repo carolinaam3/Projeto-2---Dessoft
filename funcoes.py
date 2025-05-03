@@ -48,3 +48,16 @@ def calcula_pontos_sequencia_alta(lista):
         if lista[i] == lista[i+1]-1 == lista[i+2]-2 == lista[i+3]-3 == lista[i+4]-4:
             return 30
     return 0
+
+def calcula_pontos_full_house(lista):
+    quantidade_de_numeros = list(set(lista))
+    ordenado = sorted(lista, reverse=False)
+    if len(quantidade_de_numeros) != 2:
+        return 0
+    elif ordenado[1] != ordenado[2] or ordenado[2] != ordenado[3]:
+        soma = 0
+        for i in lista:
+            soma += i
+        return soma
+    else:
+        return 0
