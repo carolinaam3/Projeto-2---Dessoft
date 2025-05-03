@@ -71,3 +71,11 @@ def calcula_pontos_quadra(lista):
                 soma += i
             return soma
     return 0
+
+
+def calcula_pontos_quina(lista):
+    lista = sorted(lista, reverse=False)
+    for i in range(len(lista)-4):
+        if lista[i] == lista[i+1] == lista[i+2] == lista[i+3] == lista[i+4]:
+            return 50
+    return 0
