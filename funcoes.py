@@ -40,3 +40,11 @@ def calcula_pontos_sequencia_baixa (lista):
         if lista[i] == lista[i+1]-1 == lista[i+2]-2 == lista[i+3]-3:
             return 15
     return 0
+
+def calcula_pontos_sequencia_alta(lista):
+    lista = list(set(lista))
+    ordenado = sorted(lista, reverse=False)
+    for i in range(len(lista)-4):
+        if lista[i] == lista[i+1]-1 == lista[i+2]-2 == lista[i+3]-3 == lista[i+4]-4:
+            return 30
+    return 0
