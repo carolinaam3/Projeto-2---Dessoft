@@ -33,28 +33,10 @@ def calcula_pontos_soma (lista):
         soma+=i
     return soma 
 
-# def calcula_pontos_sequencia_baixa (lista):
-#     menor = 100
-#     crescente = []
-#     for i in range(len(lista)):
-#         for i in lista:
-#             if i < menor:
-#                 menor = i
-#         crescente.append(menor)
-#         lista.remove(menor)
-#         menor = 100
-#     a = 0
-#     for i in range(len(crescente)-1):
-#         if crescente[i+1] > crescente[i]:
-#             a +=1
-#     if a == 4:
-#         return 15
-#     else:
-#         return 0
-
 def calcula_pontos_sequencia_baixa (lista):
+    lista = list(set(lista))
     ordenado = sorted(lista, reverse=False)
-    for i in range(2):
+    for i in range(len(lista)-3):
         if lista[i] == lista[i+1]-1 == lista[i+2]-2 == lista[i+3]-3:
             return 15
     return 0
