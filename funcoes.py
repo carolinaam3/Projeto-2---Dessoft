@@ -61,3 +61,13 @@ def calcula_pontos_full_house(lista):
         return soma
     else:
         return 0
+
+def calcula_pontos_quadra(lista):
+    lista = sorted(lista, reverse=False)
+    for i in range(len(lista)-3):
+        if lista[i] == lista[i+1] == lista[i+2] == lista[i+3]:
+            soma = 0
+            for i in lista:
+                soma += i
+            return soma
+    return 0
