@@ -93,9 +93,7 @@ def calcula_pontos_regra_avancada(lista):
 def faz_jogada (lista,categoria,dic):
     regra_sim = ['1','2','3','4','5','6']
     if categoria in regra_sim:
-        for regra, info in dic.items():
-            info[int(categoria)] = calcula_pontos_regra_simples(lista)[int(categoria)]
+        dic['regra_simples'][int(categoria)] = calcula_pontos_regra_simples(lista)[int(categoria)]
     else:
-        for regra, info in dic.items():
-            info[categoria] = calcula_pontos_regra_avancada(lista)[categoria]
+        dic['regra_avancada'][categoria] = calcula_pontos_regra_simples(lista)[categoria]
     return dic
