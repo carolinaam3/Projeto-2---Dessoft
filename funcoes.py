@@ -89,3 +89,11 @@ def calcula_pontos_regra_avancada(lista):
     dicionario['sequencia_alta'] =  calcula_pontos_sequencia_alta(lista)
     dicionario['sequencia_baixa'] =  calcula_pontos_sequencia_baixa(lista)
     return dicionario
+
+def faz_jogada (lista,categoria,dic):
+    regra_sim = ['1','2','3','4','5','6']
+    if categoria in regra_sim:
+        dic[categoria] = calcula_pontos_regra_simples(lista)
+    else:
+        dic[categoria] = calcula_pontos_regra_avancada(lista)
+    return dic
